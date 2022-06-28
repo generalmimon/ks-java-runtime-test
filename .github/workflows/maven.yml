@@ -22,9 +22,11 @@ jobs:
             repo: 'kaitai-io/kaitai_struct_java_runtime'
             ref: 'build-for-java-7'
         java-version:
+          - '7'
           - '8'
           - '11'
           - '17'
+          - '18'
 
     steps:
       - name: Checkout the KS runtime lib for Java
@@ -55,13 +57,17 @@ jobs:
           - old
           - new
         built-by-java-version:
+          - '7'
           - '8'
           - '11'
           - '17'
+          - '18'
         java-version:
+          - '7'
           - '8'
           - '11'
           - '17'
+          - '18'
 
     steps:
       - uses: actions/checkout@v3
