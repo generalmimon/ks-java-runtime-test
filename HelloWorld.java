@@ -25,12 +25,19 @@ public class HelloWorld extends KaitaiStruct {
         _read();
     }
     private void _read() {
-        this.one = this._io.readU1();
     }
-    private int one;
+    private Integer one;
+    public Integer one() {
+        if (this.one != null)
+            return this.one;
+        long _pos = this._io.pos();
+        this._io.seek(0);
+        this.one = this._io.readU1();
+        this._io.seek(_pos);
+        return this.one;
+    }
     private HelloWorld _root;
     private KaitaiStruct _parent;
-    public int one() { return one; }
     public HelloWorld _root() { return _root; }
     public KaitaiStruct _parent() { return _parent; }
 }

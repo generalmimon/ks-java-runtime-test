@@ -1,5 +1,6 @@
 meta:
   id: hello_world
-seq:
-  - id: one
+instances:
+  one:
+    pos: 0
     type: u1
