@@ -22,7 +22,6 @@ jobs:
             repo: 'kaitai-io/kaitai_struct_java_runtime'
             ref: 'build-for-java-7'
         java-version:
-          - '7'
           - '8'
           - '11'
           - '17'
@@ -57,7 +56,6 @@ jobs:
           - old
           - new
         built-by-java-version:
-          - '7'
           - '8'
           - '11'
           - '17'
