@@ -72,7 +72,7 @@ jobs:
           distribution: 'temurin'
       - uses: actions/download-artifact@v3
         with:
-          name: ks-runtime-built-by-${{ matrix.built-by-java-version }}
+          name: ks-runtime-built-by-${{ matrix.ks-java-runtime-lib-id }}-${{ matrix.built-by-java-version }}
       - name: Create a 'bin' directory for generated classes
         run: mkdir bin
       - name: Compile
