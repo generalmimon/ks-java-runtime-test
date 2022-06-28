@@ -14,9 +14,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ks-java-runtime-lib-ref:
-          - '' # the default branch
-          - 'build-for-java-7'
+        ks-java-runtime-lib:
+          - repo: 'generalmimon/kaitai_struct_java_runtime'
+            ref: 'set-jdk-7-in-pom-xml'
+          - repo: 'kaitai-io/kaitai_struct_java_runtime'
+            ref: 'build-for-java-7'
         java-version:
           - '8'
           - '11'
@@ -26,8 +28,8 @@ jobs:
       - name: Checkout the KS runtime lib for Java
         uses: actions/checkout@v3
         with:
-          repository: 'kaitai-io/kaitai_struct_java_runtime'
-          ref: ${{ matrix.ks-java-runtime-lib-ref }}
+          repository: ${{ matrix.ks-java-runtime-lib.repo }}
+          ref: ${{ matrix.ks-java-runtime-lib.ref }}
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
