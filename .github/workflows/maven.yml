@@ -19,8 +19,8 @@ jobs:
             repo: 'generalmimon/kaitai_struct_java_runtime'
             ref: 'set-jdk-7-in-pom-xml'
           - id: new
-            repo: 'generalmimon/kaitai_struct_java_runtime'
-            ref: 'move-implnote-before-p-begin'
+            repo: 'kaitai-io/kaitai_struct_java_runtime'
+            ref: 'build-for-java-7'
         java-version:
           - '8'
           - '11'
